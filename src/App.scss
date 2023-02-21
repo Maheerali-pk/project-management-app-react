@@ -1,0 +1,16 @@
+
+.filters {
+   display: flex;
+   color: #0f393b;
+   position: absolute;
+   right: 60px;
+   top: calc(110px);
+   gap: 20px;
+   font-family: "Goldplay-Medium";
+   cursor: pointer;
+}
+#app {
+   position: relative;
+   display: grid;
+   grid-template-rows: min-content auto;
+}

@@ -1,0 +1,284 @@
+.task-details-wrapper {
+   .files {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0px 10px;
+      .file {
+         display: flex;
+         a {
+            text-decoration: none;
+            color: #347362;
+         }
+         justify-content: space-between;
+         transition: all 0.2s ease-in-out;
+         &:hover {
+            a {
+               color: white;
+            }
+            i {
+               color: white;
+            }
+            background-color: #347362;
+         }
+      }
+   }
+   overflow: auto;
+   display: flex;
+   width: 0;
+   flex-direction: column;
+   height: 100%;
+   background: #f5f3ee;
+   /* SEO Suite/Pale Green */
+
+   box-sizing: border-box;
+   border-radius: 0px;
+   position: fixed;
+   right: 0;
+   top: 0;
+   z-index: 100;
+   transition: width 0.25s ease-in;
+
+   overflow: hidden;
+   &.opened {
+      width: 50%;
+
+      border: 1px solid #ced9d2;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      overflow: auto;
+   }
+   .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #ced9d2;
+      .btn {
+         display: flex;
+         align-items: center;
+         gap: 0.3rem;
+
+         &.completed {
+            background-color: #347362;
+            color: white;
+            path {
+               stroke: white;
+            }
+         }
+      }
+      .icons {
+         display: flex;
+         cursor: pointer;
+         gap: 1.3rem;
+         svg {
+            opacity: 0.5;
+         }
+      }
+   }
+   .body {
+      display: flex;
+      padding-top: 30px;
+      flex-direction: column;
+      .title {
+         font-family: "Goldplay-Semibold";
+         font-style: normal;
+         font-size: 28px;
+         line-height: 100%;
+         color: #0f393b;
+      }
+      .desc-label {
+         margin-top: 60px;
+         margin-bottom: 30px;
+         color: #0f393b;
+         font-family: "Goldplay-Bold";
+      }
+      .desc {
+         width: 100%;
+         border: none;
+         outline: none;
+         background-color: transparent;
+         font-size: 18px;
+         color: #0f393b;
+         opacity: 0.5;
+      }
+      .details-table {
+         display: grid;
+         width: 100%;
+         grid-template-columns: 1fr 2fr;
+         grid-auto-rows: 48px;
+         align-items: center;
+         .details-label {
+            font-family: Goldplay;
+            font-size: 16px;
+            color: #0f393b;
+            opacity: 0.5;
+         }
+         .details-label + div {
+            font-size: 18px;
+            color: #0f393b;
+         }
+         .date-wrapper {
+            display: flex;
+            align-items: center;
+            svg {
+               margin-right: 24px;
+            }
+            font-size: 18px;
+         }
+         .assignee {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            img {
+               height: 45px;
+               width: 45px;
+               border-radius: 50%;
+               object-fit: cover;
+            }
+            div {
+               font-family: Goldplay;
+               font-size: 18px;
+               color: #0f393b;
+            }
+         }
+         .add-deps {
+            span {
+               font-family: "Goldplay-Bold";
+               cursor: pointer;
+               font-size: 18px;
+               color: #0f393b;
+            }
+         }
+         .empty-priority {
+            width: 1rem;
+            border-bottom: 1.5px solid #000000;
+            opacity: 0.45;
+         }
+      }
+   }
+}
+
+.subtasks-wrapper {
+   margin-top: 50px;
+   .btn {
+      width: fit-content;
+      margin-top: 10px;
+   }
+   .subtasks {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid #ced9d2;
+      .subtask {
+         position: relative;
+         cursor: pointer;
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
+         border-bottom: 1px solid #ced9d2;
+         padding: 10px;
+         align-items: center;
+
+         .subtask-input {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            flex-grow: 1;
+            width: 100%;
+            font-size: 18px;
+            font-family: "Goldplay-Medium";
+            color: #0f393b;
+         }
+         &.completed {
+            .left {
+               input {
+                  color: #0f393b44;
+                  opacity: 0.75 !important;
+               }
+            }
+         }
+         .right {
+            gap: 1rem;
+            display: grid;
+            grid-template-columns: 150px 30px;
+            justify-content: end;
+            row-gap: 10px;
+            & > span > div {
+               justify-content: flex-end;
+            }
+            img {
+               height: 24px;
+               width: 24px;
+               object-fit: cover;
+               border-radius: 50%;
+            }
+         }
+         &.selected {
+            background: #ced9d2;
+            border-radius: 5px;
+         }
+         .left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-grow: 1;
+            padding-right: 10px;
+         }
+         i {
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            transform: translate(-110%, 0);
+         }
+         &:hover {
+            i {
+               opacity: 1;
+               &:hover {
+                  color: #ef8451;
+               }
+            }
+         }
+      }
+   }
+}
+.date-input {
+}
+.add-deps-heading {
+   font-family: Goldplay-Bold;
+   cursor: pointer;
+   font-size: 18px;
+   color: #0f393b;
+}
+.deps-menu-wrapper {
+   .MuiPaper-root {
+      background-color: #f5f3ee !important;
+   }
+   .MuiMenuItem-root {
+      font-size: 14px !important;
+      &.active,
+      &:hover {
+         background-color: #ced9d2 !important;
+         color: #0f393b !important;
+      }
+   }
+}
+.subtask-popup {
+   padding: 0.5rem 0;
+   .MuiOutlinedInput-input {
+      background-color: transparent !important;
+      color: #0f393b81 !important;
+      border: 1px solid #0f393b81 !important;
+      border-radius: 10px !important;
+      outline: none;
+      font-size: 14px !important;
+   }
+   .MuiOutlinedInput-notchedOutline {
+      border: none !important;
+   }
+   .MuiSvgIcon-root {
+      display: none !important;
+   }
+}
+.test.test {
+   background-color: #000000 !important;
+}

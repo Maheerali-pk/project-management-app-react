@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+height: 100%;}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@font-face {
+   font-family: "Goldplay";
+   src: local("Goldplay"), url(./fonts/Goldplay\ Regular.otf) format("opentype");
+}
+@font-face {
+   font-family: "Goldplay-Medium";
+   src: local("Goldplay-Medium"), url(./fonts/Goldplay\ Medium.otf) format("opentype");
+}
+
+@font-face {
+   font-family: "Goldplay-Semibold";
+   src: local("Goldplay-Semibold"), url(./fonts/Goldplay\ SemiBold.otf) format("opentype");
+}
+@font-face {
+   font-family: "Goldplay-Bold";
+   src: local("Goldplay-Bold"), url(./fonts/Goldplay\ Bold.otf) format("opentype");
+}
+
+body,
+::placeholder {
+   font-family: Goldplay;
+   color: #0f393b;
+}
+body {
+   background-color: #eeebe3;
+}
+html,
+body,
+#app {
+   height: 100%;
+}
+#sub-app {
+   height: 90%;
+}
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -webkit-user-drag: none;
+}
+*::after,
+*::before {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -ms-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+}
+.btn {
+   padding: 0.75rem 0.5rem;
+   font-size: 0.9rem;
+   border: 1px solid #347362;
+   border-radius: 10px;
+   color: #0f393b;
+   cursor: pointer;
+   height: fit-content;
+}
+.light-text {
+   color: #0f393b;
+   opacity: 0.5;
+}
+.popper__arrow::after {
+   border-top-color: #f5f3ee !important;
+   border-bottom-color: #f5f3ee !important;
+}
+.el-popover.el-popper {
+   background: #f5f3ee;
+}
+.el-input__inner {
+   background-color: transparent !important;
+   color: #0f393b81 !important;
+   border: 1px solid #0f393b81 !important;
+   border-radius: 10px !important;
+   outline: none;
+}
+.MuiList-padding{
+
+   padding: 0 !important;
+}
+.MuiCalendarPicker-root{
+   background-color: #f5f3ee;
+   border: 1px solid rgb(203, 213, 224);
+   box-shadow: none !important;
+}
+.MuiPickersDay-root{
+   background-color: transparent !important;
+   font-size: 14px !important;
+   font-family: "Goldplay-Medium" !important;
+   font-weight: 500;
+   color:rgb(15, 57, 59) !important;
+
+}
+
+.MuiPickersDay-root.Mui-selected{
+   font-family: "Goldplay-Bold" !important;
+   background: #e5e8e9 !important;
+
+}
+.MuiPickersDay-root.MuiPickersDay-today{
+   border-radius: 5px !important;
+   border-color: #ef8451 !important;
+   border-width: 1px !important;
+   border-style: solid !important;
+   font-family: "Goldplay-Bold" !important;
+   color: #ef8451 !important;
+   background-color: transparent !important;
+
+}
